@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.container {
+    padding: 0 15%;
+}
+
+nav {
+    margin: 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    .name-section {
+        display: flex;
+        align-items: center;
+        img {
+            width: 4rem;
+        }
+        span {
+            margin-left: -0.5em;
+            font-weight: bolder;
+            font-size: 1.2em;
+        }
+    }
+
+    .menu-bar {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        a {
+            text-decoration: none;
+            color: black;
+            height: fit-content;
+            font-weight: 900;
+            transition: text-shadow 0.2s linear;
+            font-size: 1.1em;
+        }
+        a:hover {
+            text-shadow: 0px 0px 0.3px #000000;
+        }
+    }
+}
+
+.pink-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    font-weight: 300;
+    border: 2px solid #e84949;
+    color: #ffffff;
+    background-color: #e84949;
+    filter: drop-shadow(3px 3px 3px #0000003f);
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: color 0.5s linear;
+}
+
+.pink-btn::before {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    z-index: -1;
+    transition: transform 0.5s linear;
+    transform-origin: left;
+}
+
+.pink-btn:hover::before {
+    transform: scaleX(1);
+}
+
+.pink-btn:hover{
+    color: #000000;
+}
+
+.pink-btn:active {
+    transform: translateX(3px) translateY(3px);
+    filter: none;
+}
+
+.hero-banner {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    position: relative;
+    .hero-banner-left {
+        padding: 4rem 1rem;
+        h3 {
+            font-size: 1.8em;
+            font-weight: normal;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 2.5em;
+            font-weight: normal;
+            margin-bottom: 2.5rem;
+            .running-text {
+                color: rgb(157, 92, 218);
+                font-weight: bolder;
+            }
+        }
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .hero-banner-right {
+        .user-image {
+            border-radius: 5px;
+            padding: 2rem;
+            position: relative;
+            animation: userAnime 10s infinite;
+            .profile-img {
+                border-radius: 5px;
+                width: 300px;
+            }
+            .img-circle {
+                position: absolute;
+                bottom: 0;
+                left: -0.5em;
+                animation: circleAnime 2.8s infinite;
+            }
+            .img-dots {
+                position: absolute;
+                bottom: -1em;
+                right: -1.5em;
+                animation: dotsAnime 2s infinite;
+            }
+            .img-zigzag {
+                position: absolute;
+                left: -0.5em;
+                top: 0;
+                animation: zigzagAnime 2s infinite;
+            }
+            .img-cube {
+                position: absolute;
+                top: 0;
+                right: 0;
+                animation: cubeAnime 2s infinite;
+            }
+            .img-plus {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                animation: plusAnime 10s infinite;
+            }
+
+            @keyframes dotsAnime {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(10px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+            }
+
+            @keyframes circleAnime {
+                0% {
+                    bottom: 0;
+                    left: -0.5em;
+                }
+                50% {
+                    bottom: 1.5em;
+                    left: 1.5em;
+                }
+                100% {
+                    bottom: 0;
+                    left: -0.5em;
+                }
+            }
+
+            @keyframes zigzagAnime {
+                0% {
+                    transform: translateX(0px);
+                }
+                50% {
+                    transform: translateX(-10px);
+                }
+                100% {
+                    transform: translateX(0px);
+                }
+            }
+
+            @keyframes cubeAnime {
+                0% {
+                    transform: translateY(0px) rotateY(0);
+                }
+                50% {
+                    transform: translateY(-20px) rotateY(180deg);
+                }
+                100% {
+                    transform: translateY(0px) rotateY(360deg);
+                }
+            }
+            @keyframes plusAnime {
+                0% {
+                    transform: translateY(0px) translateY(0px);
+                }
+                50% {
+                    transform: translateX(-20px) translateY(-20px);
+                }
+                100% {
+                    transform: translateX(0px) translateY(0px);
+                }
+            }
+        }
+        @keyframes userAnime {
+            0% {
+                transform: scale(0.9);
+                filter: grayscale(0);
+                box-shadow: 4px 4px 10px #383737;
+            }
+            50% {
+                transform: scale(1.02);
+                filter: grayscale(0.5);
+                box-shadow: none;
+            }
+            100% {
+                transform: scale(0.9);
+                filter: grayscale(0);
+                box-shadow: 4px 4px 10px #383737;
+            }
+        }
+    }
+    .design-name {
+        user-select: none;
+        position: absolute;
+        bottom: -0.3em;
+        left: 0;
+        font-size: 7em;
+        font-weight: bold;
+        color: rgb(231, 231, 231);
+    }
+}
+
+.project-section {
+    background-color: rgb(231, 231, 231);
+    padding-bottom: 2rem;
+    .project-container {
+        padding: 0 15%;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        .project-heading {
+            text-align: center;
+            padding-top: 0.5em;
+            font-size: 4em;
+            font-weight: 800;
+            color: #f72835;
+        }
+        .project-card {
+            width: 90%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0px 0px 10px #383737;
+            position: relative;
+            background-repeat: no-repeat;
+
+            .project-number{
+                position: absolute;
+                top: -2rem;
+                right: -1.8rem;
+                color: #ffffff;
+                z-index: 20;
+                font-size: 10em;
+                display: none;
+            }
+
+            .project-card-contents{
+                width: 70%;
+                height: 100%;
+                padding: 10% 10%;
+                color: #ffffff;
+                position: relative;
+                z-index: 20;
+                transition: transform 0.3s linear;
+                .tech-stack-container{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    margin-bottom: 1rem;
+                    img{
+                        width: 3rem;
+                    }
+                }
+
+                .project-name{
+                    font-size: 3.5em;
+                    margin-bottom: 0.5rem;
+                }
+
+                .project-desc{
+                    font-style: italic;
+                    font-size: 0.9em;
+                    margin-bottom: 1rem;
+                }
+
+                .btn-group{
+                    display: flex;
+                    align-items: center;
+                    gap: 1em;
+                    .pink-btn{
+                        font-size: 1em;
+                    }
+                    i{
+                        font-size: 2rem;
+                        transition: color 0.2s linear;
+                    }
+                    i:hover{
+                        color: #e84949;
+                    }
+                }
+            }
+        }
+        .project-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            opacity: 0.6;
+        }
+        .project-card::before{
+            content: '0';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transform: scaleX(0);
+            background-color: rgb(6, 6, 236);
+            opacity: 0.4;
+            transition: transform 0.3s linear;
+            transform-origin: left;
+        }
+        
+        .project-card:hover::before{
+            transform: scaleX(1);
+        }
+
+        .project-card:hover .project-card-contents{
+            transform: scale(1.03);
+        }
+
+        .project-card:hover .project-number{
+            display: block;
+        }
+
+        .align-left{
+            align-self: flex-start;
+
+        }
+        .align-right{
+            align-self: flex-end;
+            .project-number{
+                top: -2rem;
+                left: -1.8rem;
+            }
+            .project-card-contents{
+                margin-left: 30%;
+            }
+            
+        }
+    }
+}
+
+#project1{
+    background-image: url(../images/projects/Project1.png);
+}
+
+#project2{
+    background-image: url(../images/projects/Project2.png);
+}
+
+#project3{
+    background-image: url(../images/projects/Project3.png);
+}
+
+#project4{
+    background-image: url(../images/projects/Project4.png);
+}
