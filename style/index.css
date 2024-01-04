@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 #wrapper {
   height: 100vh;
@@ -13,7 +14,8 @@ body {
   font-family: "Be Vietnam Pro", sans-serif; }
 
 .container {
-  padding: 0 15%; }
+  width: 1200px;
+  margin: 0 auto; }
 
 nav {
   margin: 1rem 0rem;
@@ -203,18 +205,20 @@ nav {
   background-color: #e7e7e7;
   padding-bottom: 2rem; }
   .project-section .project-container {
-    padding: 0 15%;
+    width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 5rem; }
     .project-section .project-container .project-heading {
       text-align: center;
       padding-top: 0.5em;
-      font-size: 4em;
+      font-size: 5em;
       font-weight: 800;
       color: #f72835; }
     .project-section .project-container .project-card {
       width: 90%;
+      height: 550px;
       background-repeat: no-repeat;
       background-size: cover;
       box-shadow: 0px 0px 10px #383737;
@@ -311,7 +315,10 @@ nav {
   background-image: url(../images/projects/Project4.png); }
 
 .skill-section .skill-container {
-  padding: 15%;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 10rem;
+  padding-bottom: 15rem;
   display: flex;
   gap: 5rem;
   position: relative; }
@@ -342,7 +349,7 @@ nav {
       z-index: -1;
       animation: blobAnime 5s infinite; }
     .skill-section .skill-container .skill-container-right .icon {
-      width: 15%;
+      width: 13%;
       transition: transform 0.1s linear; }
     .skill-section .skill-container .skill-container-right .icon:hover {
       transform: scale(1.2); }
@@ -357,8 +364,43 @@ nav {
   .skill-section .skill-container .skill-text {
     position: absolute;
     bottom: -3rem;
-    right: 0;
+    right: -7rem;
     font-size: 10em;
     font-weight: bold;
     color: #e7e7e7;
     user-select: none; }
+
+.footer-section {
+  background-color: #e7e7e7; }
+  .footer-section .icon-list {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    gap: 1rem; }
+    .footer-section .icon-list i {
+      padding: 1rem;
+      font-size: 2em;
+      background-color: #ffffff;
+      border-radius: 50%;
+      transition: background-color 0.3s linear; }
+    .footer-section .icon-list i:hover {
+      background-color: #e84949;
+      color: #ffffff; }
+  .footer-section .footer-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 2rem; }
+    .footer-section .footer-menu a {
+      text-decoration: none;
+      color: black;
+      height: fit-content;
+      font-weight: 900;
+      transition: text-shadow 0.2s linear;
+      font-size: 1em; }
+    .footer-section .footer-menu a:hover {
+      text-shadow: 0px 0px 0.3px #000000; }
+  .footer-section .copy-right-text {
+    text-align: center;
+    user-select: none;
+    opacity: 0.5; }
