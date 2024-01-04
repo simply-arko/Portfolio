@@ -87,7 +87,7 @@ nav {
     transform: scaleX(1);
 }
 
-.pink-btn:hover{
+.pink-btn:hover {
     color: #000000;
 }
 
@@ -279,7 +279,7 @@ nav {
             position: relative;
             background-repeat: no-repeat;
 
-            .project-number{
+            .project-number {
                 position: absolute;
                 top: -2rem;
                 right: -1.8rem;
@@ -289,7 +289,7 @@ nav {
                 display: none;
             }
 
-            .project-card-contents{
+            .project-card-contents {
                 width: 70%;
                 height: 100%;
                 padding: 10% 10%;
@@ -297,39 +297,39 @@ nav {
                 position: relative;
                 z-index: 20;
                 transition: transform 0.3s linear;
-                .tech-stack-container{
+                .tech-stack-container {
                     display: flex;
                     flex-wrap: wrap;
                     gap: 10px;
                     margin-bottom: 1rem;
-                    img{
+                    img {
                         width: 3rem;
                     }
                 }
 
-                .project-name{
+                .project-name {
                     font-size: 3.5em;
                     margin-bottom: 0.5rem;
                 }
 
-                .project-desc{
+                .project-desc {
                     font-style: italic;
                     font-size: 0.9em;
                     margin-bottom: 1rem;
                 }
 
-                .btn-group{
+                .btn-group {
                     display: flex;
                     align-items: center;
                     gap: 1em;
-                    .pink-btn{
+                    .pink-btn {
                         font-size: 1em;
                     }
-                    i{
+                    i {
                         font-size: 2rem;
                         transition: color 0.2s linear;
                     }
-                    i:hover{
+                    i:hover {
                         color: #e84949;
                     }
                 }
@@ -345,8 +345,8 @@ nav {
             background-color: #000000;
             opacity: 0.6;
         }
-        .project-card::before{
-            content: '0';
+        .project-card::before {
+            content: "0";
             position: absolute;
             top: 0;
             left: 0;
@@ -358,49 +358,121 @@ nav {
             transition: transform 0.3s linear;
             transform-origin: left;
         }
-        
-        .project-card:hover::before{
+
+        .project-card:hover::before {
             transform: scaleX(1);
         }
 
-        .project-card:hover .project-card-contents{
+        .project-card:hover .project-card-contents {
             transform: scale(1.03);
         }
 
-        .project-card:hover .project-number{
+        .project-card:hover .project-number {
             display: block;
         }
 
-        .align-left{
+        .align-left {
             align-self: flex-start;
-
         }
-        .align-right{
+        .align-right {
             align-self: flex-end;
-            .project-number{
+            .project-number {
                 top: -2rem;
                 left: -1.8rem;
             }
-            .project-card-contents{
+            .project-card-contents {
                 margin-left: 30%;
             }
-            
         }
     }
 }
 
-#project1{
+#project1 {
     background-image: url(../images/projects/Project1.png);
 }
 
-#project2{
+#project2 {
     background-image: url(../images/projects/Project2.png);
 }
 
-#project3{
+#project3 {
     background-image: url(../images/projects/Project3.png);
 }
 
-#project4{
+#project4 {
     background-image: url(../images/projects/Project4.png);
+}
+
+.skill-section {
+    .skill-container {
+        padding: 15%;
+        display: flex;
+        gap: 5rem;
+        position: relative;
+
+        .skill-container-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h1 {
+                color: #e84949;
+                span {
+                    font-size: 2em;
+                }
+            }
+            p {
+                text-align: justify;
+                font-size: 0.9em;
+            }
+        }
+        .skill-container-right {
+            width: 50%;
+            display: flex;
+            position: relative;
+            flex-wrap: wrap;
+            gap: 5%;
+            justify-content: space-between;
+
+            .blob {
+                width: 50%;
+                top: 25%;
+                left: 25%;
+                position: absolute;
+                z-index: -1;
+                animation: blobAnime 5s infinite;
+            }
+
+            .icon {
+                width: 15%;
+                transition: transform 0.1s linear;
+            }
+
+            .icon:hover {
+                transform: scale(1.2);
+            }
+
+            @keyframes blobAnime {
+                0% {
+                    transform: translateX(-20px) translateY(20px);
+                }
+                50% {
+                    transform: translateX(0px) translateY(0px);
+                }
+                100% {
+                    transform: translateX(-20px) translateY(20px);
+                }
+            }
+        }
+
+        .skill-text {
+            position: absolute;
+            bottom: -3rem;
+            right: 0;
+            font-size: 10em;
+            font-weight: bold;
+            color: rgb(231, 231, 231);
+            user-select: none;
+        }
+    }
 }

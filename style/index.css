@@ -271,7 +271,7 @@ nav {
       background-color: #000000;
       opacity: 0.6; }
     .project-section .project-container .project-card::before {
-      content: '0';
+      content: "0";
       position: absolute;
       top: 0;
       left: 0;
@@ -309,3 +309,56 @@ nav {
 
 #project4 {
   background-image: url(../images/projects/Project4.png); }
+
+.skill-section .skill-container {
+  padding: 15%;
+  display: flex;
+  gap: 5rem;
+  position: relative; }
+  .skill-section .skill-container .skill-container-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+    .skill-section .skill-container .skill-container-left h1 {
+      color: #e84949; }
+      .skill-section .skill-container .skill-container-left h1 span {
+        font-size: 2em; }
+    .skill-section .skill-container .skill-container-left p {
+      text-align: justify;
+      font-size: 0.9em; }
+  .skill-section .skill-container .skill-container-right {
+    width: 50%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: space-between; }
+    .skill-section .skill-container .skill-container-right .blob {
+      width: 50%;
+      top: 25%;
+      left: 25%;
+      position: absolute;
+      z-index: -1;
+      animation: blobAnime 5s infinite; }
+    .skill-section .skill-container .skill-container-right .icon {
+      width: 15%;
+      transition: transform 0.1s linear; }
+    .skill-section .skill-container .skill-container-right .icon:hover {
+      transform: scale(1.2); }
+
+@keyframes blobAnime {
+  0% {
+    transform: translateX(-20px) translateY(20px); }
+  50% {
+    transform: translateX(0px) translateY(0px); }
+  100% {
+    transform: translateX(-20px) translateY(20px); } }
+  .skill-section .skill-container .skill-text {
+    position: absolute;
+    bottom: -3rem;
+    right: 0;
+    font-size: 10em;
+    font-weight: bold;
+    color: #e7e7e7;
+    user-select: none; }
